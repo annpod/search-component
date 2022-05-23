@@ -1,0 +1,97 @@
+{
+  "name": "@connectlabs/search-and-results-component",
+  "version": "1.0.0",
+  "description": "SearchComponent and ResultsComponent distributed as a private npm package",
+  "homepage": "https://bitbucket.org/connectib/search-and-results-component#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/connectib/search-and-results-component.git"
+  },
+  "license": "ISC",
+  "author": "SmartSpace",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/typings"
+  ],
+  "scripts": {
+    "start": "npm run clean && webpack --config webpack.config.js --env env=development --watch",
+    "build": "npm run clean && webpack --config webpack.config.js --env env=production",
+    "validate": "npm run fmt && npm run lint && npm run tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "fmt": "echo fmt: \"Nothing here yet\"",
+    "fmt:fix": "echo fmt: \"Nothing here yet\"",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "tsc": "tsc",
+    "tsc:dev": "tsc --watch --preserveWatchOutput",
+    "clean": "shx rm -rf dist/",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "ie 11"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-typescript": "^7.17.12",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
+    "@types/jest": "^27.5.1",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "babel-loader": "^8.2.5",
+    "eslint-plugin-storybook": "^0.5.12",
+    "shx": "^0.3.4",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.5.3",
+    "@storybook/manager-webpack5": "^6.5.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^11.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "react-scripts": "^5.0.1",
+    "ts-jest": "^28.0.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

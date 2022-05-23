@@ -1,0 +1,6 @@
+webpack.config.js
+dist/
+babel.config.js
+*lint*
+jest.setup.ts
+jest.config.js
